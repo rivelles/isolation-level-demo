@@ -3,13 +3,11 @@ version: '3.1'
 services:
 
   db:
-    image: postgres
+    image: mysql
     restart: always
     environment:
-        - POSTGRES_USER=postgres
-        - POSTGRES_PASSWORD=postgres
+        MYSQL_ROOT_PASSWORD: pass
     ports:
-        - '5438:5432'
+        - '3306:3306'
     volumes: 
-        - ./postgres-data:/var/lib/postgresql/data
-        - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+        - ./mysql-init-files:/docker-entrypoint-initdb.d
