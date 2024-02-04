@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS accounts (
 CREATE TABLE IF NOT EXISTS loans (
   id INT NOT NULL,
   account_id INT NOT NULL,
-  ammount DECIMAL,
+  amount DECIMAL,
   PRIMARY KEY (id),
   CONSTRAINT fk_account
     FOREIGN KEY(id)
@@ -24,5 +24,8 @@ VALUES
 (1, 10, 1000.0),
 (2, 20, 1000.0),
 (3, 30, 1000.0),
-(4, 40, 1000.0),
-(5, 50, 1000.0);
+(4, 30, 1000.0),
+(5, 40, 1000.0),
+(6, 40, 1000.0),
+(7, 70, 1000.0),
+(8, 80, 1000.0);
